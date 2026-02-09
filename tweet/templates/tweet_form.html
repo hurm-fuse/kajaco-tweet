@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block title %}
+Tweet
+{% endblock title %}
+
+{% block content %}
+<h1>Welcome to Kajaco</h1>
+
+<h2>{% if form.instance.pk %}
+    Edit Tweet
+    {% else %}
+    Create tweet
+    {% endif %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    <a href="{% url 'tweet_list' %}">< Back</a>
+</h2>
+{% endblock content %}

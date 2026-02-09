@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+
+<div class="landing">
+    <h1>Kajaco the heart of dark internet</h1>
+    <p>A simple place to post short thoughts</p>
+    <a href="{% url 'login' %}">
+        <button>Start Writing</button>
+    </a>
+</div>
+
+{% endblock content %}
